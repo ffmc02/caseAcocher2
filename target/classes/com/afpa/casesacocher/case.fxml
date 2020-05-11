@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.afpa.casesacocher.CaseController">
+    <stylesheets>
+        <URL value="@/styles/case.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="TextUser" layoutX="66.0" layoutY="32.0" promptText="Votre texte" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="32.0" />
+      <Label fx:id="result" layoutX="66.0" layoutY="71.0" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="75.0" />
+      <ListView layoutX="23.0" layoutY="208.0" prefHeight="131.0" prefWidth="120.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="457.0" AnchorPane.topAnchor="208.0" />
+      <MenuBar layoutX="23.0" layoutY="183.0" AnchorPane.bottomAnchor="192.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="457.0" AnchorPane.topAnchor="183.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Fond">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <RadioButton fx:id="bgRedBtn" layoutX="55.0" layoutY="227.0" mnemonicParsing="false" text="Rouge" />
+      <RadioButton fx:id="bgGreenBtn" layoutX="55.0" layoutY="264.0" mnemonicParsing="false" text="Vert" />
+      <RadioButton fx:id="bgBlueBtn" layoutX="55.0" layoutY="301.0" mnemonicParsing="false" text="Bleu" />
+      <ListView layoutX="219.0" layoutY="208.0" prefHeight="131.0" prefWidth="120.0" AnchorPane.leftAnchor="219.0" AnchorPane.rightAnchor="261.0" />
+      <MenuBar layoutX="219.0" layoutY="183.0" AnchorPane.leftAnchor="219.0" AnchorPane.rightAnchor="261.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Texte">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <RadioButton fx:id="textRedBtn" layoutX="251.0" layoutY="227.0" mnemonicParsing="false" text="Rouge" />
+      <RadioButton fx:id="textWhiteBtn" layoutX="251.0" layoutY="264.0" mnemonicParsing="false" text="Vert" />
+      <RadioButton fx:id="textBlackBtn" layoutX="251.0" layoutY="301.0" mnemonicParsing="false" text="Black" />
+      <ListView layoutX="405.0" layoutY="211.0" prefHeight="100.0" prefWidth="120.0" AnchorPane.leftAnchor="405.0" AnchorPane.rightAnchor="37.0" />
+      <MenuBar layoutX="405.0" layoutY="186.0" AnchorPane.leftAnchor="405.0" AnchorPane.rightAnchor="37.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Casse">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <RadioButton fx:id="lowercaseBtn" layoutX="437.0" layoutY="230.0" mnemonicParsing="false" text="Minuscule" />
+      <RadioButton fx:id="uppercaseBtn" layoutX="437.0" layoutY="267.0" mnemonicParsing="false" text="Majuscule" />
+      <ListView layoutX="420.0" layoutY="39.0" prefHeight="131.0" prefWidth="143.0" AnchorPane.leftAnchor="405.0" AnchorPane.rightAnchor="37.0" />
+      <MenuBar layoutX="420.0" layoutY="14.0" AnchorPane.leftAnchor="405.0" AnchorPane.rightAnchor="37.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Choix">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <CheckBox fx:id="checkBg" layoutX="438.0" layoutY="57.0" mnemonicParsing="false" text="Couleur de fond" />
+      <CheckBox fx:id="checkText" layoutX="438.0" layoutY="96.0" mnemonicParsing="false" text="Coullur de Texte" />
+      <CheckBox fx:id="checkCasse" layoutX="438.0" layoutY="136.0" mnemonicParsing="false" text="Casse" />
+   </children>
+</AnchorPane>
