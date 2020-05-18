@@ -16,7 +16,7 @@
         <URL value="@/styles/case.css" />
     </stylesheets>
    <children>
-      <TextField fx:id="TextUser" layoutX="66.0" layoutY="32.0" promptText="Votre texte" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="32.0" />
+      <TextField fx:id="TextUser" layoutX="66.0" layoutY="32.0" onKeyTyped="#change" promptText="Votre texte" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="32.0" />
       <Label fx:id="result" layoutX="66.0" layoutY="71.0" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="75.0" />
       <ListView fx:id="listBg" layoutX="23.0" layoutY="208.0" prefHeight="131.0" prefWidth="120.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="457.0" AnchorPane.topAnchor="208.0" />
       <MenuBar layoutX="23.0" layoutY="183.0" AnchorPane.bottomAnchor="192.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="457.0" AnchorPane.topAnchor="183.0">
@@ -28,9 +28,9 @@
           </Menu>
         </menus>
       </MenuBar>
-      <RadioButton fx:id="bgRedBtn" layoutX="55.0" layoutY="227.0" mnemonicParsing="false" text="Rouge" />
-      <RadioButton fx:id="bgGreenBtn" layoutX="55.0" layoutY="264.0" mnemonicParsing="false" text="Vert" />
-      <RadioButton fx:id="bgBlueBtn" layoutX="55.0" layoutY="301.0" mnemonicParsing="false" text="Bleu" />
+      <RadioButton fx:id="bgRedBtn" layoutX="55.0" layoutY="227.0" mnemonicParsing="false" onAction="#bgRed" onKeyTyped="#bgRed" text="Rouge" />
+      <RadioButton fx:id="bgGreenBtn" layoutX="55.0" layoutY="264.0" mnemonicParsing="false" onAction="#bgGreen" text="Vert" />
+      <RadioButton fx:id="bgBlueBtn" layoutX="55.0" layoutY="301.0" mnemonicParsing="false" onAction="#bgBlue" text="Bleu" />
       <ListView fx:id="listText" layoutX="219.0" layoutY="208.0" prefHeight="131.0" prefWidth="120.0" AnchorPane.leftAnchor="219.0" AnchorPane.rightAnchor="261.0" />
       <MenuBar layoutX="219.0" layoutY="183.0" AnchorPane.leftAnchor="219.0" AnchorPane.rightAnchor="261.0">
          <menus>
@@ -41,9 +41,9 @@
             </Menu>
          </menus>
       </MenuBar>
-      <RadioButton fx:id="textRedBtn" layoutX="251.0" layoutY="227.0" mnemonicParsing="false" text="Rouge" />
-      <RadioButton fx:id="textWhiteBtn" layoutX="251.0" layoutY="264.0" mnemonicParsing="false" text="blanc" />
-      <RadioButton fx:id="textBlackBtn" layoutX="251.0" layoutY="301.0" mnemonicParsing="false" text="Black" />
+      <RadioButton fx:id="textRedBtn" layoutX="251.0" layoutY="227.0" mnemonicParsing="false" onAction="#textRed" text="Rouge" />
+      <RadioButton fx:id="textWhiteBtn" layoutX="251.0" layoutY="264.0" mnemonicParsing="false" onAction="#textWhite" text="blanc" />
+      <RadioButton fx:id="textBlackBtn" layoutX="251.0" layoutY="301.0" mnemonicParsing="false" onAction="#textBlack" text="Black" />
       <ListView fx:id="listCasse" layoutX="405.0" layoutY="211.0" prefHeight="100.0" prefWidth="120.0" AnchorPane.leftAnchor="405.0" AnchorPane.rightAnchor="37.0" />
       <MenuBar layoutX="405.0" layoutY="186.0" AnchorPane.leftAnchor="405.0" AnchorPane.rightAnchor="37.0">
          <menus>
@@ -54,8 +54,8 @@
             </Menu>
          </menus>
       </MenuBar>
-      <RadioButton fx:id="lowercaseBtn" layoutX="437.0" layoutY="230.0" mnemonicParsing="false" text="Minuscule" />
-      <RadioButton fx:id="uppercaseBtn" layoutX="437.0" layoutY="267.0" mnemonicParsing="false" text="Majuscule" />
+      <RadioButton fx:id="lowercaseBtn" layoutX="437.0" layoutY="230.0" mnemonicParsing="false" onAction="#minusText" text="Minuscule" />
+      <RadioButton fx:id="uppercaseBtn" layoutX="437.0" layoutY="267.0" mnemonicParsing="false" onAction="#majText" text="Majuscule" />
       <ListView fx:id="listChoise" layoutX="420.0" layoutY="39.0" prefHeight="131.0" prefWidth="143.0" AnchorPane.leftAnchor="405.0" AnchorPane.rightAnchor="37.0" />
       <MenuBar layoutX="420.0" layoutY="14.0" AnchorPane.leftAnchor="405.0" AnchorPane.rightAnchor="37.0">
          <menus>
